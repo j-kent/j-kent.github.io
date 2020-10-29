@@ -44,25 +44,15 @@
             </div>
             <nav id="header-main-menu" class="big-menu">
                 <ul class="main-menu sm sm-clean">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="unified.html">Unified UI</a>
-                    </li>
-                    <li>
-                        <a href="tms.html">Treasury Management System</a>
-                    </li>
-                    <li>
-                        <a href="vc.html">Virtual Card</a>
-                    </li>
-                    <li>
-                        <a href="embudo.html">Embudo</a>
-                    </li>
-                    <li>
-                        <a href="personas.html">Personas &amp; Maps</a>
-                    </li>                                        
-                </ul>                
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="disb.html">Digital Disbursements</a></li>
+                    <li><a href="personas.html">Personas</a></li>
+                    <li><a href="user-journey-workshops.html">User Journey Workshops</a></li>
+                    <li><a href="unified.html">Unified UI</a></li>
+                    <li><a href="tms.html">Treasury Management System</a></li>
+                    <li><a href="vc.html">Virtual Card</a></li>
+                    <li><a href="embudo.html">Audience Search Engine</a></li>
+                </ul>                     
             </nav>            
             <div class="clear"></div>
         </div>
@@ -106,19 +96,18 @@
 
                         <div class="one_half last">
                             <h4>Goal</h4>
-                            <p>To create a way to send digital funds as quickly and easily as possible to a user, with the understanding that they may be experiencing a time of crisis.</p>
+                            <p>To create a tool that quickly and easily disburses digital funds to users who are typically in a state of crisis.</p>
                         </div>
 
                         <h4 class="clear">Requirements & Considerations</h4>
-                        <p>The application must be web based and work on both mobile and desktop. The interface should also be themeable since subsidiaries of Farmer’s will utilize it. Additionally, an agent management interface will also need to be developed.</p>
+                        <p>The application is required to be web-based. It must function on both mobile and desktop. The interface should be themeable as Farmer's Insurance subsidiaries will also utilize it. Additionally, an agent management system will be developed.</p>
 
                         <h4>Requirements Gathering and Discovery</h4>
-                        <p>I was not able to find any examples of digital disbursements being used currently in the insurance industry. Sending funds peer to peer is becoming very common, and many solutions exist (paypal, venmo, cash app, zelle). But these solutions are not business-to-consumer don’t carry the same legal and regulatory restrictions that the insurance industry must adhere to.</p>
-                        <p>There is also the issue of identity. If I send money to the wrong person via Paypal, it’s not Paypal’s problem. But what if your insurance company sends the wrong person the money to replace your vehicle? When you deposit a check at your bank, you have already established your identity when you created your account. When receiving digital funds from a company, additional care must be taken to ensure that the correct person is receiving them. The proposed solution must be secure and trustworthy, yet still be quick and easy to use.</p>
-                        <p>I interviewed multiple insurance professionals to gather additional information on how the disbursement process currently works, especially what can go wrong. I also got their feedback on my proposed solutions as I worked through the design.</p>
+                        <p>No identifiable examples of instant, digital disbursements currently exist in the insurance industry. Peer-to-peer fund transfer is increasingly common, and many solutions exist (paypal, venmo, cash app, zelle). Since these solutions are not business-to-consumer, additional legal and regulatory restrictions of the insurance industry must be considered in the final design.</p>
+                        <p>The proposed solution must also be secure and trustworthy. The issue of personal identification must be considered within the functionality. Assignment of incorrect payees happens frequently in the peer-to-peer segment. For the business-to-consumer special attention must be paid to the disbursement of digital funds and the verification of personal identity to avoid incorrect payments.  An in-depth method for identity verification will need to be integrated to ensure that the correct person receives the funds.</p>
+                        <p>The discovery process included interviewing multiple insurance professionals to gather additional information on the current disbursement process, especially with regard to opportunity for improvement. Follow up review sessions were held for feedback on proposed solutions as the design was developed.</p>
 
                         <h4>Creating the User Flow</h4>
-                        <p>Here’s the basics of how the app would flow:</p>
                         <img title="" src="images/disb/user-flow.png" alt="">
                         <br /><br />
                         <div class="screenshot">
@@ -166,7 +155,7 @@
                         
                         <div class="one_half">
                             <h4>Responsive Mobile</h4>
-                            <p>Discovery and user interviews confirmed that users would need to access thier disbursements on mobile. The purpose of the disbursements portal is to increase the time from approved claim to funds being received. Users could potentially be in situations where they could be stranded and need immediate financial assistance. If your house is flooding and you need a hotel room, or if your car is totalled and you need a rental - waiting on a check isn't going to cut it. It was a primary foche mobile experience must be easy, fast &amp; secure.</p>
+                            <p>Discovery and user interviews confirmed that users would need to access disbursements on mobile. The purpose of the disbursements portal is to decrease the time from approved claim to receipt of funds. Since users could potentially be in situations where they are stranded or need immediate financial assistance, speed of payment is key. Emergency situations such as a house flooding or a totaled car require emergency level response. This product is a primary foche mobile experience that must be easy, fast &amp; secure.</p>
                         </div>
                         <div class="one_half last">
                             <small>Mobile Payment type selector</small>
@@ -176,10 +165,10 @@
                         
 
                         <h4>Admin Portal</h4>
-                        <p>There was also the need for a robust admin application. This would provide for the claims adjuster to create, edit, &amp; void disbursements. The admin portal would need history and reporting capibilites for regulatory and compliance purposes. The status of disbursements would need overtly displayed for when errors or any support issues arise. The admin portal is also designed to be embedded in Farmer's internal managment site.</p>
+                        <p>There was additional need for a robust Admin application. This would provide the claims adjuster tools to create, edit, & void disbursements. The Admin portal requires history and reporting capabilities for regulatory and compliance purposes. The status of disbursements should overtly display errors, should any support issues arise. The admin portal is also designed to be embedded in Farmer's internal management site.</p>
                         <small>Disbursements Admin Overview</small>
                         <img class="screenshot" title="" src="images/disb/disb-home.png" alt="">
-                        <p>Insurance companies already have software for creating and managing claims, but these usually end at the payment step. Our system would need to sit in between the claims management system and the check printing and mailing system. Also, if a digital disbursement was not claimed within a certain amount of time, it would be canceled and a check would be mailed. Regulations require that funds be disbursed by certain dates that claims are approved. The user would be notified what was going on as well.</p>
+                        <p>Existing software allows insurance companies to create and manage claims, but the process typically concludes at point of payment. The new system would need to sit in between the claims management system and the check disbursement system. Also, a failsafe would need to be designed to immediately mail a paper check if digital funds were not claimed within a set timeframe. Regulations require that funds be disbursed within given timelines once claims are approved. Automatic user notification will also need to be integrated.</p>
                         <div class="one_half">
                             <small>Disbursement Details</small>
                             <img class="screenshot" title="" src="images/disb/disb-details.png" alt="">
